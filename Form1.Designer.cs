@@ -29,9 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.panelRedondeado1 = new PanelRedondeado();
+            this.panelRedondeado1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.panelRedondeado3 = new PanelRedondeado();
+            this.panelRedondeado3 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.cbrecordarusuario = new System.Windows.Forms.CheckBox();
             this.cbocultarcontrasena = new System.Windows.Forms.CheckBox();
             this.btnregistrarse = new System.Windows.Forms.Button();
@@ -42,32 +44,27 @@
             this.txtusuario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panelRedondeado2 = new PanelRedondeado();
+            this.panelRedondeado2 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblfrase = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panelRedondeado1.SuspendLayout();
             this.panelRedondeado3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelRedondeado2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panelRedondeado1
             // 
             this.panelRedondeado1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
-            this.panelRedondeado1.ColorBorde = System.Drawing.Color.Transparent;
             this.panelRedondeado1.Controls.Add(this.label5);
             this.panelRedondeado1.Controls.Add(this.panelRedondeado3);
             this.panelRedondeado1.Controls.Add(this.panelRedondeado2);
-            this.panelRedondeado1.GrosorBorde = 1;
             this.panelRedondeado1.Location = new System.Drawing.Point(13, 13);
             this.panelRedondeado1.Name = "panelRedondeado1";
-            this.panelRedondeado1.RadioBorde = 20;
             this.panelRedondeado1.Size = new System.Drawing.Size(1159, 636);
             this.panelRedondeado1.TabIndex = 0;
             // 
@@ -82,7 +79,6 @@
             // panelRedondeado3
             // 
             this.panelRedondeado3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panelRedondeado3.ColorBorde = System.Drawing.Color.Transparent;
             this.panelRedondeado3.Controls.Add(this.pictureBox3);
             this.panelRedondeado3.Controls.Add(this.pictureBox2);
             this.panelRedondeado3.Controls.Add(this.cbrecordarusuario);
@@ -95,12 +91,30 @@
             this.panelRedondeado3.Controls.Add(this.txtusuario);
             this.panelRedondeado3.Controls.Add(this.label2);
             this.panelRedondeado3.Controls.Add(this.label1);
-            this.panelRedondeado3.GrosorBorde = 1;
             this.panelRedondeado3.Location = new System.Drawing.Point(682, 15);
             this.panelRedondeado3.Name = "panelRedondeado3";
-            this.panelRedondeado3.RadioBorde = 20;
             this.panelRedondeado3.Size = new System.Drawing.Size(458, 603);
             this.panelRedondeado3.TabIndex = 1;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(50, 289);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(44, 37);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 11;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(50, 178);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(44, 41);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
             // 
             // cbrecordarusuario
             // 
@@ -121,7 +135,7 @@
             this.cbocultarcontrasena.TabIndex = 8;
             this.cbocultarcontrasena.Text = "Ocultar Contraseña";
             this.cbocultarcontrasena.UseVisualStyleBackColor = true;
-            this.cbocultarcontrasena.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.cbocultarcontrasena.CheckedChanged += new System.EventHandler(this.chkOcultarPassword_CheckedChanged);
             // 
             // btnregistrarse
             // 
@@ -158,6 +172,7 @@
             this.btniniciarsesion.TabIndex = 5;
             this.btniniciarsesion.Text = "Iniciar Sesión";
             this.btniniciarsesion.UseVisualStyleBackColor = false;
+            this.btniniciarsesion.Click += new System.EventHandler(this.btniniciarsesion_Click_1);
             // 
             // txtcontrasena
             // 
@@ -209,15 +224,12 @@
             // panelRedondeado2
             // 
             this.panelRedondeado2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panelRedondeado2.ColorBorde = System.Drawing.Color.Transparent;
             this.panelRedondeado2.Controls.Add(this.label8);
-            this.panelRedondeado2.Controls.Add(this.label7);
+            this.panelRedondeado2.Controls.Add(this.lblfrase);
             this.panelRedondeado2.Controls.Add(this.label6);
             this.panelRedondeado2.Controls.Add(this.pictureBox1);
-            this.panelRedondeado2.GrosorBorde = 1;
             this.panelRedondeado2.Location = new System.Drawing.Point(15, 15);
             this.panelRedondeado2.Name = "panelRedondeado2";
-            this.panelRedondeado2.RadioBorde = 20;
             this.panelRedondeado2.Size = new System.Drawing.Size(611, 603);
             this.panelRedondeado2.TabIndex = 0;
             this.panelRedondeado2.Paint += new System.Windows.Forms.PaintEventHandler(this.panelRedondeado2_Paint);
@@ -230,19 +242,18 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(480, 17);
             this.label8.TabIndex = 3;
-            this.label8.Text = "     Administra tu consumo 📚  - Mejora tus hábitos 🧠  - Cuida tus recursos 🌳\r\n" +
-    "";
+            this.label8.Text = "    Administra tu consumo 📚  - Mejora tus hábitos 🧠  - Cuida tus recursos 🌳\r\n";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // label7
+            // lblfrase
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(170, 276);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(268, 21);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "\"Luz que apagas, luz que no pagas.\"";
+            this.lblfrase.AutoSize = true;
+            this.lblfrase.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblfrase.Location = new System.Drawing.Point(170, 276);
+            this.lblfrase.Name = "lblfrase";
+            this.lblfrase.Size = new System.Drawing.Size(268, 21);
+            this.lblfrase.TabIndex = 2;
+            this.lblfrase.Text = "\"Luz que apagas, luz que no pagas.\"";
             // 
             // label6
             // 
@@ -266,26 +277,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(50, 178);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(44, 41);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 10;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(50, 289);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(44, 37);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 11;
-            this.pictureBox3.TabStop = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -296,24 +287,25 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "EcoConsumo";
+            this.Load += new System.EventHandler(this.Form1_Load_1);
             this.panelRedondeado1.ResumeLayout(false);
             this.panelRedondeado1.PerformLayout();
             this.panelRedondeado3.ResumeLayout(false);
             this.panelRedondeado3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelRedondeado2.ResumeLayout(false);
             this.panelRedondeado2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private PanelRedondeado panelRedondeado1;
-        private PanelRedondeado panelRedondeado2;
-        private PanelRedondeado panelRedondeado3;
+        private System.Windows.Forms.Panel panelRedondeado1;
+        private System.Windows.Forms.Panel panelRedondeado2;
+        private System.Windows.Forms.Panel panelRedondeado3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtusuario;
@@ -325,7 +317,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblfrase;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.CheckBox cbocultarcontrasena;
         private System.Windows.Forms.CheckBox cbrecordarusuario;

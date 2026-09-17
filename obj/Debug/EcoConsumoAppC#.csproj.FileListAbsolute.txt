@@ -8,9 +8,11 @@ C:\Users\User\OneDrive\Documents\UNAN\Eco Consumo\Proyecto en C# con windowsForm
 C:\Users\User\OneDrive\Documents\UNAN\Eco Consumo\Proyecto en C# con windowsForms\EcoConsumoAppC#\EcoConsumoAppC#\obj\Debug\EcoConsumoAppC#.csproj.CoreCompileInputs.cache
 C:\Users\User\OneDrive\Documents\UNAN\Eco Consumo\Proyecto en C# con windowsForms\EcoConsumoAppC#\EcoConsumoAppC#\obj\Debug\EcoConsumoAppC#.exe
 C:\Users\User\OneDrive\Documents\UNAN\Eco Consumo\Proyecto en C# con windowsForms\EcoConsumoAppC#\EcoConsumoAppC#\obj\Debug\EcoConsumoAppC#.pdb
-C:\Users\User\OneDrive\Documents\UNAN\Eco Consumo\Proyecto en C# con windowsForms\bin\Debug\EcoConsumoAppC#.exe
 C:\Users\User\OneDrive\Documents\UNAN\Eco Consumo\Proyecto en C# con windowsForms\bin\Debug\EcoConsumoAppC#.exe.config
+C:\Users\User\OneDrive\Documents\UNAN\Eco Consumo\Proyecto en C# con windowsForms\bin\Debug\EcoConsumoAppC#.exe
+C:\Users\User\OneDrive\Documents\UNAN\Eco Consumo\Proyecto en C# con windowsForms\bin\Debug\EcoConsumoAppC#.pdb
 C:\Users\User\OneDrive\Documents\UNAN\Eco Consumo\Proyecto en C# con windowsForms\obj\Debug\EcoConsumoAppC#.csproj.AssemblyReference.cache
+C:\Users\User\OneDrive\Documents\UNAN\Eco Consumo\Proyecto en C# con windowsForms\obj\Debug\EcoConsumoAppC_.Dashboard.resources
 C:\Users\User\OneDrive\Documents\UNAN\Eco Consumo\Proyecto en C# con windowsForms\obj\Debug\EcoConsumoAppC_.Form1.resources
 C:\Users\User\OneDrive\Documents\UNAN\Eco Consumo\Proyecto en C# con windowsForms\obj\Debug\EcoConsumoAppC_.pantallaregistro.resources
 C:\Users\User\OneDrive\Documents\UNAN\Eco Consumo\Proyecto en C# con windowsForms\obj\Debug\EcoConsumoAppC_.Properties.Resources.resources

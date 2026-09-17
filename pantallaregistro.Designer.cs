@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.panelRedondeado1 = new PanelRedondeado();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btncrearcuenta = new System.Windows.Forms.Button();
+            this.txtconfirmarcontrasenausuario = new System.Windows.Forms.TextBox();
             this.txtcontrasenausuario = new System.Windows.Forms.TextBox();
             this.txtcorreousuario = new System.Windows.Forms.TextBox();
             this.txtusuariousuario = new System.Windows.Forms.TextBox();
@@ -40,7 +41,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panelRedondeado1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,8 +48,8 @@
             // 
             this.panelRedondeado1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panelRedondeado1.ColorBorde = System.Drawing.Color.Transparent;
-            this.panelRedondeado1.Controls.Add(this.button1);
-            this.panelRedondeado1.Controls.Add(this.textBox1);
+            this.panelRedondeado1.Controls.Add(this.btncrearcuenta);
+            this.panelRedondeado1.Controls.Add(this.txtconfirmarcontrasenausuario);
             this.panelRedondeado1.Controls.Add(this.txtcontrasenausuario);
             this.panelRedondeado1.Controls.Add(this.txtcorreousuario);
             this.panelRedondeado1.Controls.Add(this.txtusuariousuario);
@@ -67,13 +67,26 @@
             this.panelRedondeado1.Size = new System.Drawing.Size(460, 487);
             this.panelRedondeado1.TabIndex = 0;
             // 
-            // textBox1
+            // btncrearcuenta
             // 
-            this.textBox1.Location = new System.Drawing.Point(28, 359);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(399, 29);
-            this.textBox1.TabIndex = 11;
+            this.btncrearcuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btncrearcuenta.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncrearcuenta.ForeColor = System.Drawing.Color.White;
+            this.btncrearcuenta.Location = new System.Drawing.Point(76, 417);
+            this.btncrearcuenta.Name = "btncrearcuenta";
+            this.btncrearcuenta.Size = new System.Drawing.Size(297, 39);
+            this.btncrearcuenta.TabIndex = 12;
+            this.btncrearcuenta.Text = "Crear Cuenta";
+            this.btncrearcuenta.UseVisualStyleBackColor = false;
+            this.btncrearcuenta.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txtconfirmarcontrasenausuario
+            // 
+            this.txtconfirmarcontrasenausuario.Location = new System.Drawing.Point(28, 359);
+            this.txtconfirmarcontrasenausuario.Multiline = true;
+            this.txtconfirmarcontrasenausuario.Name = "txtconfirmarcontrasenausuario";
+            this.txtconfirmarcontrasenausuario.Size = new System.Drawing.Size(399, 29);
+            this.txtconfirmarcontrasenausuario.TabIndex = 11;
             // 
             // txtcontrasenausuario
             // 
@@ -169,19 +182,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Registro de Nuevo Usuario";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(76, 417);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(297, 39);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Crear Cuenta";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // pantallaregistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,6 +191,7 @@
             this.Controls.Add(this.panelRedondeado1);
             this.Name = "pantallaregistro";
             this.Text = "pantallaregistro";
+            this.Load += new System.EventHandler(this.pantallaregistro_Load);
             this.panelRedondeado1.ResumeLayout(false);
             this.panelRedondeado1.PerformLayout();
             this.ResumeLayout(false);
@@ -207,10 +208,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtnombreusuario;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtconfirmarcontrasenausuario;
         private System.Windows.Forms.TextBox txtcontrasenausuario;
         private System.Windows.Forms.TextBox txtcorreousuario;
         private System.Windows.Forms.TextBox txtusuariousuario;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btncrearcuenta;
     }
 }
