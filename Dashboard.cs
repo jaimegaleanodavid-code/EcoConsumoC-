@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -29,7 +30,7 @@ namespace EcoConsumoAppC_
 
         private void btnMenuCerrarSesion_Click(object sender, EventArgs e)
         {
-            // Muestra la ventana de confirmación
+            
             DialogResult resultado = MessageBox.Show(
                 "¿Está seguro de que desea cerrar la sesión actual?",
                 "Cerrar Sesión",
@@ -37,18 +38,41 @@ namespace EcoConsumoAppC_
                 MessageBoxIcon.Question
             );
 
-            // Si el usuario presiona "Sí"
+           
             if (resultado == DialogResult.Yes)
             {
-                // 1. Instancia nuevamente formulario de Login
-
                 Form1 login = new Form1();
                 login.Show();
 
-                // 2. Cierra el Dashboard actual
+                
                 this.Close();
             }
-            // Si presiona "No", el código no hace nada y el usuario se queda en el Dashboard
+            
+        }
+
+        private void chartConsumoSemanal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblBodyTip_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void llblproyectogithub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                llblproyectogithub.LinkVisited = true;
+
+                
+                Process.Start(new ProcessStartInfo("https://github.com/jaimegaleanodavid-code/EcoConsumoC-.git") { UseShellExecute = true });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo abrir el enlace: " + ex.Message);
+            }
         }
     }
 }
