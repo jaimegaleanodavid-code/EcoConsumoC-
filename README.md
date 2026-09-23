@@ -1,4 +1,4 @@
-# EcoConsumoC-
+# EcoConsumoCsharp
 Proyecto Universitario para revisar el consumo energético de aparatos electrónicos, Elaborado en C# con WIndows Forms .NET Framework 
 <img width="1024" height="1024" alt="logo EcoConsumo" src="https://github.com/user-attachments/assets/6fd21b54-b244-4b3f-adfa-804f485f0433" />
 
