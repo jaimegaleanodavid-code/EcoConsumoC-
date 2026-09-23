@@ -33,15 +33,38 @@ namespace EcoConsumoAppC_
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Random rand = new Random();
-            lblfrase.Text = frasesEcológicas[rand.Next(frasesEcológicas.Length)];
 
+            //MessageBox.Show("Form1_Load se está ejecutando");
+
+            //Random rand = new Random();
+
+            Random rand = new Random();
+            int indice = rand.Next(frasesEcológicas.Length);
+
+            //MessageBox.Show("Índice elegido: " + indice);
+
+            lblfrase.Text = frasesEcológicas[indice];
+
+            //lblfrase.Text = frasesEcológicas[rand.Next(frasesEcológicas.Length)];
+            //lblfrase.Text = frasesEcológicas[0];
+
+            cbocultarcontrasena.Checked = true;
             txtcontrasena.UseSystemPasswordChar = true;
         }
 
         private void chkOcultarPassword_CheckedChanged(object sender, EventArgs e)
         {
             txtcontrasena.UseSystemPasswordChar = cbocultarcontrasena.Checked;
+            //MessageBox.Show("El CheckBox está funcionando");
+
+            //if (cbocultarcontrasena.Checked)
+            //{
+            //    txtcontrasena.PasswordChar = '●';
+            //}
+            //else
+            //{
+            //    txtcontrasena.PasswordChar = '\0';
+            //}
         }
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)

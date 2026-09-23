@@ -176,11 +176,11 @@
             // 
             // txtcontrasena
             // 
-            this.txtcontrasena.Location = new System.Drawing.Point(100, 289);
-            this.txtcontrasena.Multiline = true;
+            this.txtcontrasena.Location = new System.Drawing.Point(100, 298);
             this.txtcontrasena.Name = "txtcontrasena";
-            this.txtcontrasena.Size = new System.Drawing.Size(311, 37);
+            this.txtcontrasena.Size = new System.Drawing.Size(311, 20);
             this.txtcontrasena.TabIndex = 4;
+            this.txtcontrasena.UseSystemPasswordChar = true;
             // 
             // label3
             // 
@@ -240,20 +240,20 @@
             this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(54, 575);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(480, 17);
+            this.label8.Size = new System.Drawing.Size(476, 17);
             this.label8.TabIndex = 3;
             this.label8.Text = "    Administra tu consumo 📚  - Mejora tus hábitos 🧠  - Cuida tus recursos 🌳\r\n";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // lblfrase
             // 
-            this.lblfrase.AutoSize = true;
             this.lblfrase.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblfrase.Location = new System.Drawing.Point(170, 276);
+            this.lblfrase.Location = new System.Drawing.Point(3, 243);
             this.lblfrase.Name = "lblfrase";
-            this.lblfrase.Size = new System.Drawing.Size(268, 21);
+            this.lblfrase.Size = new System.Drawing.Size(608, 60);
             this.lblfrase.TabIndex = 2;
             this.lblfrase.Text = "\"Luz que apagas, luz que no pagas.\"";
+            this.lblfrase.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
@@ -287,7 +287,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "EcoConsumo";
-            this.Load += new System.EventHandler(this.Form1_Load_1);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panelRedondeado1.ResumeLayout(false);
             this.panelRedondeado1.PerformLayout();
             this.panelRedondeado3.ResumeLayout(false);
